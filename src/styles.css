@@ -42,21 +42,23 @@ body {
 /* #D6B892; #B3AC93; */
 /* rgb(38, 29, 21); rgb(155, 139, 117); rgb(88, 80, 66); rgb(95, 73, 50); rgb(219, 197, 166);*/
 
+.navbar-container ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
 .navbar-container li a:hover
 {
     color: white;
     background-color: #787777;
     transition: background-color 0.5s ease;
-}
-
-.navbar-container ul {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    font-weight: 400;
-    font-size: 1rem;
 }
 
 .navbar-container li:active {
@@ -72,8 +74,9 @@ body {
 .cart-widget-container .badge{
     color: #FFF;
     font-size: 75%;
-    border-radius: .75rem;
+    border-radius: 0.75rem;
     background-color: red;
+    margin-bottom: 1rem;
 }
 
 .cart-widget-container > img {
@@ -106,4 +109,22 @@ body {
     padding: 1rem;
     width: 100%;
     text-align: center;
+}
+
+/* Home Carousel - probablemente lo cambie de lugar o de componente más adelante */
+.carousel-container {
+    background: #B3AC93;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 20rem;
+    min-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
