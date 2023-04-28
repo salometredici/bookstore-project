@@ -4,35 +4,31 @@ import { Carousel } from "react-bootstrap";
 const images = [
     {
         alt: "Citadel Library",
-        src: "./assets/carousel-item-1.jpg"
+        src: require("./assets/carousel-item-1.jpg")
     },
     {
         alt: "Samwell alone",
-        src: "./assets/carousel-item-2.jpg"
+        src: require("./assets/carousel-item-2.jpg")
     },
     {
         alt: "Samwell with the maester",
-        src: "./assets/carousel-item-3.jpg"
+        src: require("./assets/carousel-item-3.jpg")
     }
 ]
- 
-function Home() {
+
+const Home = () => {
+    
+    const carouselItems = images.map((img, idx) => (
+        <Carousel.Item key={idx} className="carousel-item">
+            <img src={img.src} alt={img.alt} />
+        </Carousel.Item>
+    ))
+
     return (
         <Carousel
-            showArrows={true}
-            autoPlay={true}
-            infiniteLoop={true}
             className="carousel-container">
-            {images.map(image => (
-                <Carousel.Item key={image.alt}>
-                    <img
-                        src={image.url}
-                        alt={image.alt}
-                    />
-                </Carousel.Item>
-            ))}
+            {carouselItems} 
         </Carousel>
     );  
 }
-
 export default Home;
