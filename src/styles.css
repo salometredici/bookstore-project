@@ -110,21 +110,3 @@ body {
     width: 100%;
     text-align: center;
 }
-
-/* Home Carousel - probablemente lo cambie de lugar o de componente más adelante */
-.carousel-container {
-    background: #B3AC93;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: hidden;
-}
-
-.carousel-item {
-    height: 20rem;
-    min-width: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
-}

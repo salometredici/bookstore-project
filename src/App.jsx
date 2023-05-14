@@ -2,14 +2,14 @@ import './styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import Home from './components/Home/Home';
+import HomeCarousel from './components/HomeCarousel/HomeCarousel'
 
 function App() {
   return (
     <div className="App">
       <NavBar />
+      <HomeCarousel />
       <ItemListContainer greeting={'Welcome'} />
-      <Home />
     </div>
   );
 }
