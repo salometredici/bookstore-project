@@ -1,0 +1,97 @@
+/* NavBar Container */
+.navbar-container {
+    background-color: #ACA4A4;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+/* Logo */
+.navbar-container .brand {
+    width: 10rem;
+    padding: 0.5rem;
+}
+
+.navbar-container .brand > img {
+    width: 100%;
+}
+
+/* Listado de categorías */
+.navbar-container a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+}
+
+/* Palletes */
+/* rgb(53, 39, 27); rgb(70, 61, 48); rgb(147, 120, 90); rgb(190, 158, 120); rgb(105, 91, 72); */
+/* #D6B892; #B3AC93; */
+/* rgb(38, 29, 21); rgb(155, 139, 117); rgb(88, 80, 66); rgb(95, 73, 50); rgb(219, 197, 166);*/
+
+.navbar-container ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.navbar-container li a:hover
+{
+    color: white;
+    background-color: #787777;
+    transition: background-color 0.5s ease;
+}
+
+.navbar-container li:active {
+    color: #B3AC93;
+}
+
+/* Cart Widget */
+.cart-widget-container {
+    display: flex;
+    align-items: center;
+}
+
+.cart-widget-container .badge{
+    color: #FFF;
+    font-size: 75%;
+    border-radius: 0.75rem;
+    background-color: red;
+    margin-bottom: 1rem;
+}
+
+.cart-widget-container > img {
+    width: 2rem;
+}
+
+/* Barra de búsqueda */
+.search-bar-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar-container > input, .search-bar-container > span .search-btn {
+    border: none;
+    outline: none;
+    border-radius: 0;
+    background-clip: padding-box;
+    display: block;
+    padding: .375rem .75rem;
+}
+
+.search-bar-container input {
+    width: 50%;
+    font-weight: 300;
+}

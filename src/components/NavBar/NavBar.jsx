@@ -1,3 +1,4 @@
+import './assets/navbar.css'
 import Brand from "./Brand/Brand";
 import NavBarMenu from "./NavBarMenu/NavBarMenu";
 import SearchBar from "./SearchBar/SearchBar";
