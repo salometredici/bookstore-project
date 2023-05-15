@@ -1,25 +1,30 @@
+import './assets/item-list-container.css';
 import { useState, useEffect } from "react";
-import { getProducts } from '../../asyncMock';
-import ItemList from './ItemList/ItemList'
+import { useParams } from 'react-router-dom';
+import { getAllBooks, getBooksByCategory } from '../../asyncMock';
+import ItemList from './ItemList/ItemList';
 
-const ItemListContainer = ({ greeting }) => {
-    const [products, setProducts] = useState([])
+export default function ItemListContainer({itemListTitle}) {
+    
+    const [books, setBooks] = useState([]);
+    const { category } = useParams();
+
     useEffect(() => {
-        getProducts()
+        const asyncFunc = category ? getBooksByCategory : getAllBooks;
+        asyncFunc(category)
             .then(response => {
-                setProducts(response)
+                setBooks(response);
             })
             .catch(error => {
-                console.error(error)
+                console.error(error);
             })
-    }, [])
+    }, [category]);
 
     return (
-        <div className="greeting">
-            <h1>{greeting}</h1>
-            <ItemList products={products}/>
+        <div className="item-list-container">
+            <h1>{itemListTitle}</h1>
+            { category && <h2 className="item-list-category">{category} Books</h2> }
+            <ItemList books={books}/>
         </div>
-    )
+    );
 }
-
-export default ItemListContainer

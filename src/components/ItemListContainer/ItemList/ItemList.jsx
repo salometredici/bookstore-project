@@ -1,23 +1,15 @@
-import { useState, useEffect } from "react";
-import { getProductById } from '../../../asyncMock';
-import ItemDetail from "../ItemDetail/ItemDetail";
+import './assets/item-list.css';
+import Item from '../Item/Item';
 
-const ItemDetailContainer = () => {
-    const [product, setProduct] = useState(null)
-    useEffect(() => {
-        getProductById('1')
-            .then(response => {
-                setProduct(response)
-            })
-            .catch(error => {
-                console.error(error)
-            })
-    }, [])
-
+const ItemList = ({books}) => {
     return (
-        <div className="item-detail-container">
-            <ItemDetail {...product}/>
+        <div className="item-list">
+            {
+                books.map(book => 
+                    <Item key={book.id} {...book} />
+                )
+            }
         </div>
-    )
+    );
 }
-export default ItemDetailContainer
+export default ItemList;

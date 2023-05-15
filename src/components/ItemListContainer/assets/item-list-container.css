@@ -1,0 +1,15 @@
+.item-list-container {
+    /* display: flexbox; */
+}
+
+.item-list-container h1 {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.item-list-container .item-list-category {
+    text-align: center;
+    text-transform: capitalize;
+}

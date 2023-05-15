@@ -1,17 +1,27 @@
+import { NavLink } from "react-router-dom";
+
 export default function NavBarMenu() {
     return (
-        <ul>
+        <ul className="categories">
             <li>
-                <a href="#fiction">Fiction</a>
+                <NavLink to={"/category/fiction"} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>
+                    Fiction
+                </NavLink>
             </li>
             <li>
-                <a href="#nofiction">Non Fiction</a>
+                <NavLink to={"/category/non-fiction"} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>
+                    Non Fiction
+                </NavLink>
             </li>
             <li>
-                <a href="#children">Kids</a>
+                <NavLink to={"/category/children"} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>
+                    Kids
+                </NavLink>
             </li>
             <li>
-                <a href="#education">Academic</a>
+                <NavLink to={"/category/education"} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>
+                    Academic
+                </NavLink>
             </li>
         </ul>
     );

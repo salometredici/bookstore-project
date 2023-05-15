@@ -7,16 +7,21 @@
     align-items: stretch;
     gap: 2rem;
     padding: 0 1rem;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
 }
 
 /* Logo */
 .navbar-container .brand {
     width: 10rem;
+    align-self: center;
     padding: 0.5rem;
 }
 
 .navbar-container .brand > img {
     width: 100%;
+    min-height: 50%;
 }
 
 /* Listado de categorías */
@@ -26,6 +31,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    text-align: center;
     padding: .25rem;
 }
 
@@ -73,25 +79,4 @@
 
 .cart-widget-container > img {
     width: 2rem;
-}
-
-/* Barra de búsqueda */
-.search-bar-container {
-    width: 50%;
-    display: flex;
-    align-items: center;
-}
-
-.search-bar-container > input, .search-bar-container > span .search-btn {
-    border: none;
-    outline: none;
-    border-radius: 0;
-    background-clip: padding-box;
-    display: block;
-    padding: .375rem .75rem;
-}
-
-.search-bar-container input {
-    width: 50%;
-    font-weight: 300;
 }
