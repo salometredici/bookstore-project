@@ -7,29 +7,29 @@ export const CartContext = createContext({
 export const CartProvider = ({children}) => {
     const [cart, setCart] = useState([])
     
-    console.log(cart)
+    console.log(cart);
 
     const addItem = (item, quantity) => {
         if (!alreadyInCart(item.id))
         {
-            setCart(prev => [...prev, {...item, quantity}])
+            setCart(prev => [...prev, {...item, quantity}]);
         } 
         else
         {
-            console.error('The product already exists')
+            console.error('The product already exists');
         }
     }
 
     const removeItem = (itemId) => {
-        setCart(cart.filter(prod => prod.id !== itemId))
+        setCart(cart.filter(prod => prod.id !== itemId));
     }
 
     const clearCart = () => {
-        setCart([])
+        setCart([]);
     }
 
     const alreadyInCart = (itemId) => {
-        return cart.some(prod => prod.id === itemId)
+        return cart.some(prod => prod.id === itemId);
     }
 
     return (

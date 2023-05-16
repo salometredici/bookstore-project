@@ -1,6 +1,8 @@
 .carousel-container {
     padding-top: 4rem;
-    background: #B3AC93;
+    /* background: #B3AC93; */
+    /* background: linear-gradient(to bottom right, black, darkgray); */
+    background: linear-gradient(180deg, black, #787777);
     display: flex;
     flex-wrap: nowrap;
     overflow: hidden;
@@ -8,15 +10,24 @@
 
 .carousel-item {
     height: 25rem;
-    min-width: 100%;
+    /* min-width: 100%; */
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* vertical-align: center; */
     transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .carousel-item > img {
-    width: 100%;
+    /* width: 50%;
     height: 100%;
+    margin: auto; */
+    width: auto;
+    /* height: 100%; */
+    /* max-height: 245px; */
+    margin: auto; 
+    display: block;
+    /* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.1)),to(rgba(255,255,255,0.8)), color-stop(.9,#fff)); */
+    background-image: linear-gradient(rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 100%);
 }

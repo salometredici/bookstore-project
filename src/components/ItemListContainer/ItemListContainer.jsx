@@ -14,6 +14,7 @@ export default function ItemListContainer({itemListTitle}) {
         asyncFunc(category)
             .then(response => {
                 setBooks(response);
+                console.log('setee con category: ' + category);
             })
             .catch(error => {
                 console.error(error);

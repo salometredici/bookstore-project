@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import HomeCarousel from './components/HomeCarousel/HomeCarousel';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/ItemListContainer/ItemList/ItemList';
+import ItemDetailContainer from './components/ItemListContainer/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
 import { CartProvider } from './context/CartContext';
 
@@ -19,11 +19,11 @@ export default function App() {
             <Route path='/' element={<ItemListContainer itemListTitle={'All products'}/>} />
             <Route path='/category/:category' element={<ItemListContainer itemListTitle={'Products by category'}/>} />
             <Route path='/book/:bookId' element={<ItemDetailContainer />} />
-            <Route path='/cart' element={<Cart />}></Route>
-            <Route path="*" element={<h4>404 NOT FOUND</h4>} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='*' element={<h4>404 NOT FOUND</h4>} />
           </Routes>
         </CartProvider>
       </BrowserRouter>
     </div>
-  )
+  );
 }
