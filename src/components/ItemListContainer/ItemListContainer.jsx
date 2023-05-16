@@ -14,7 +14,6 @@ export default function ItemListContainer({itemListTitle}) {
         asyncFunc(category)
             .then(response => {
                 setBooks(response);
-                console.log('setee con category: ' + category);
             })
             .catch(error => {
                 console.error(error);
@@ -23,9 +22,11 @@ export default function ItemListContainer({itemListTitle}) {
 
     return (
         <div className="item-list-container">
-            <h1>{itemListTitle}</h1>
-            { category && <h2 className="item-list-category">{category} Books</h2> }
-            <ItemList books={books}/>
+            <div className="item-list-content">
+                <h1>{itemListTitle}</h1>
+                { category && <h2 className="item-list-category">{category} Books</h2> }
+                <ItemList books={books}/>
+            </div>
         </div>
     );
 }

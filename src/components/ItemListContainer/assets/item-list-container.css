@@ -1,17 +1,26 @@
 .item-list-container {
-    height: 100%;
-    width: 100%;
-    overflow-x: scroll;
+    /* width: 100%; */
+    /* height: 100%; */
+    /* overflow-x: scroll; */
+    /* position: relative; */
+    padding: 1rem;
 }
 
-.item-list-container h1 {
+.item-list-content {
+    width: 80%;
+    overflow-x: hidden;    
+    position: relative;
+    left: 10%;
+}
+
+.item-list-container .item-list-content h1 {
     padding: 1rem;
-    width: 100%;
     text-align: center;
     text-transform: uppercase;
+    border-bottom: 1px solid black;
 }
 
-.item-list-container .item-list-category {
+.item-list-container .item-list-content .item-list-category {
     text-align: center;
     text-transform: capitalize;
 }

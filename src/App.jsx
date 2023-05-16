@@ -19,7 +19,7 @@ export default function App() {
             <Route path='/' element={<ItemListContainer itemListTitle={'All products'}/>} />
             <Route path='/category/:category' element={<ItemListContainer itemListTitle={'Products by category'}/>} />
             <Route path='/book/:bookId' element={<ItemDetailContainer />} />
-            <Route path='/cart' element={<Cart />} />
+            {/* <Route path='/cart' element={<Cart />} /> */}
             <Route path='*' element={<h4>404 NOT FOUND</h4>} />
           </Routes>
         </CartProvider>
