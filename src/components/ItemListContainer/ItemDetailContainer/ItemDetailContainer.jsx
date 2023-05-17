@@ -1,3 +1,4 @@
+import './assets/item-detail-container.css'
 import { useState, useEffect } from "react";
 import { getBookById } from "../../../asyncMock";
 import { useParams } from 'react-router-dom';

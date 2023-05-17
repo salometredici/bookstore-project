@@ -1,3 +1,4 @@
+import './assets/item-detail.css'
 import { useContext, useState } from "react";
 import { Link } from 'react-router-dom';
 import ItemCount from "../ItemCount/ItemCount";
@@ -16,39 +17,37 @@ const ItemDetail = ({id, title, author, category, img, price, stock, description
     };
 
     return (
-        <article className="cardItem">
-            <header className="header">
-                <h2 className="item-header">{title}</h2>
-            </header>
-            <picture>
-                <img src={img} alt={title} className="book-img"/>
-            </picture>
-            <section>
-                <p className="info">
-                    Author: {author}
-                </p>
-                <p className="info">
-                    Category: {category}
-                </p>
-                <p className="info">
-                    Description: {description}
-                </p>
-                <p className="info">
-                    Price: {price}
-                </p>
-                <p className="info">
-                    Available stock: {stock}
-                </p>
-            </section>
-            <footer className="item-footer">
+        <article className="book-detail">
+          <div className="book-title">
+              <h2>{title}</h2>
+          </div>
+          <div className="cont-stack">
+            <div className="book-picture">
+              <picture >
+                <img src={img} alt={title}/>
+              </picture>
+            </div>
+            <div className="book-info">
+              <section>
+                <p><span>Author:</span> {author}</p>
+                <p><span>Price:</span> {price} ARS</p>
+                <p><span>Available stock:</span> {stock}</p>
+                <p><span>Category:</span> {category}</p>
+                <p><span>Description:</span> {description}</p>
+              </section>
+            </div>
+            <div className="book-counter">
                 {
                     quantityAdded > 0 ? (
-                        <Link to="/cart" className="option">Go to cart</Link>
+                        <div className="book-checkout">
+                          <Link to="/cart" className="btn-checkout" type="button">Go to Checkout</Link>
+                        </div>
                     ) : (
                         <ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>
                     )
                 }
-            </footer>
+            </div>
+          </div>
         </article>
     );
 }

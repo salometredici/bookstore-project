@@ -17,6 +17,7 @@ export default function Cart() {
     return (
         <div>
             { cart.map(prod => <CartItem key={prod.id} {...prod}/>) }
+            <h2>Under construction!!!</h2>
             <h3>Total: ${total}</h3>
             <button onClick={() => clearCart()} className="button">Clear Cart</button>
             <Link to="/checkout" className="option">Checkout</Link>

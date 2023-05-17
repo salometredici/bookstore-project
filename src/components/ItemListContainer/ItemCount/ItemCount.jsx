@@ -16,14 +16,16 @@ export default function ItemCount({stock, initial, onAdd}) {
 
     return (
         <div className="counter">
-            <div className="controls">
-                <button className="button" onClick={decrement}>-</button>
-                <h4 className="number">{quantity}</h4>
-                <button className="button" onClick={increment}>+</button>
-            </div>
-            <div className="button" onClick={() => onAdd(quantity)} disabled={!stock}>
-                Add to cart
-            </div>
+          <div className="controls">
+            <button className="btn-counter" onClick={decrement}>-</button>
+            <h4 className="number">{quantity}</h4>
+            <button className="btn-counter" onClick={increment}>+</button>
+          </div>
+          <div className="btn-add-to-cart">
+            <button type="button" onClick={() => onAdd(quantity)} disabled={!stock}>
+              Add to Cart
+            </button>
+          </div>
         </div>
     );
 }

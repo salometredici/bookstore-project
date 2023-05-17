@@ -45,10 +45,14 @@
 }
 
 .card-item .card-footer a {
+    display: flex;
+    width: 100%;
+    height: 100%    ;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 500;
+    justify-content: center;
     letter-spacing: 0.1rem;
 }
 
