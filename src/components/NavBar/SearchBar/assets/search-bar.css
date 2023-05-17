@@ -1,0 +1,24 @@
+/* Barra de búsqueda */
+.search-bar-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar-container > input, .search-bar-container > span .search-btn {
+    border: none;
+    outline: none;
+    border-radius: 0;
+    background-clip: padding-box;
+    display: block;
+    padding: .375rem .75rem;
+}
+
+.search-bar-container input {
+    width: 50%;
+    font-weight: 300;
+}
+
+.search-bar-container input:focus::placeholder {
+    color: transparent;
+}
